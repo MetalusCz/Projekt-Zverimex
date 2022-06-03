@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&family=Mohave:ital,wght@0,300;1,300&family=Open+Sans:ital,wght@0,300;1,300&family=Poppins:ital,wght@0,400;1,300&display=swap" rel="stylesheet">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="style.css">
+    
+    <title>Formular</title>
+</head>
+<body>
+    <div class="cela_stranka">
+        <header>
+            <div class="header">
+                <div class="header_obr"><img src="img/header_logo.jpg" alt="logo"></div>
+                    <ul class="udaje">
+                        <li><h4>Zverimex Ajax</h4></li>
+                        <li><i class="bi bi-envelope"></i> Email: nejakymail@mail.cz</li>
+                        <li><i class="bi bi-telephone-inbound"></i> Tel.: +420 123 456 789</li>
+                        <li><h4>Adresa: </h4></li>
+                        <li>zahradni 123 - Ostrava 100</li>
+                    </ul>
+                    <div class="vid">
+                        <video width="280" height="200" autoplay loop muted>
+                            <source src="img/video.mp4" type="video/mp4">
+                        </video>
+                    </div>
+            </div>
+        </header>
+        <!-- ------------------obsah---------------- -->
+        <main>
+            <h3>Contact Form</h3>
+
+                <div class="container">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, cumque?</p>
+                <form>
+                    <label for="fname">Jmeno:</label>
+                    <input type="text" id="fname" name="firstname" placeholder="Jmeno..">
+
+                    <label for="lname">Email:</label>
+                    <input type="text" id="email" name="email" placeholder="Email..">
+
+                    <label for="lname">Tel.:</label>
+                    <input type="text" id="phone" name="telefon" placeholder="Telefonni číslo..">
+
+                    <p>Vyber způsob kontaktování:</p>
+                    <br />
+                        <div class="radio-container">
+                        <input type="radio" id="email" name="stejne" />
+                        <label for="email">E-mail</label>
+
+                        <input type="radio" id="phone" name="stejne" />
+                        <label for="phone">Telefon</label>
+                        </div>
+                    <br />
+                    <label for="country">Otázky ?</label>
+                    <select id="country" name="country">
+                    <option value="otazka1">Kde se nacházíme?</option>
+                    <option value="otazka2">O zvířatech?</option>
+                    <option value="otazka3">Jak se k nám dostat?</option>
+                    </select>
+                    <label for="subject">Poznámka</label>
+                    <textarea id="subject" name="subject" placeholder="Neváhejte nám napsat.." style="height:100px"></textarea>
+
+                    <input type="submit" value="Submit">
+                </form>
+                </div>
+        </main>
+
+
+        <!-- ------------------Navigace----------------- -->
+        <nav class="navbar">
+            <div class="menu">
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link" target="_blank">Úvod</a></li>
+                    <li><a href="nase-nabidka.html" class="nav-link" target="_blank">Naše nabídka</a></li>
+                    <li><a href="cenik.html" class="nav-link" target="_blank">Ceník</a></li>
+                    <li><a href="formular.html" class="nav-link" target="_blank">Kontaktní formulář</a></li>
+                    <li><a href="objednavka.html" class="nav-link" target="_blank">Objednávka</a></li>
+                </ul>
+            </div>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+
+
+        <!-- ------------------- Footer ------------------------ -->
+        <footer>
+            <audio controls>
+                <source src="img/0004378.mp3" type="audio/mpeg">
+              </audio>
+              <div class="text-footer">
+                <ul>
+                    <li>&copy; since 1993</li>
+                    <li>~David Hejna~</li>
+                </ul>
+              </div>
+        </footer>
+    </div>
+
+
+    <script>
+        const hamburger = document.querySelector(".hamburger")
+        const navMenu = document.querySelector(".nav-menu")
+
+        hamburger.addEventListener("click", () => {
+            hamburger.classList.toggle("active")
+            navMenu.classList.toggle("active")
+        })
+        document.querySelectorAll(".nav-link").forEach(n => n.addEventListener("click", () => {
+            hamburger.classList.remove("active");
+            navMenu.classList.remove("active");
+        }))
+
+    </script>
+</body>
+</html>
